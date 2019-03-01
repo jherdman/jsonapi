@@ -11,11 +11,13 @@ defmodule JSONAPI.Serializer do
   require Logger
 
   @doc """
-  Takes a view, data and a optional plug connection and returns a fully JSONAPI Serialized document.
-  This assumes you are using the JSONAPI.View and have data in maps or structs.
+  Takes a view, data and a optional Plug connection and returns a fully JSONAPI
+  Serialized document. This assumes you are using the `JSONAPI.View` and have
+  data in maps or structs.
 
-  Please refer to `JSONAPI.View` for more information. If you are in interested in relationships
-  and includes you may also want to reference the `JSONAPI.QueryParser`.
+  Please refer to `JSONAPI.View` for more information. If you are in interested
+  in relationships and includes you may also want to reference the
+  `JSONAPI.QueryParser`.
   """
   def serialize(view, data, conn \\ nil, meta \\ nil) do
     query_includes =
